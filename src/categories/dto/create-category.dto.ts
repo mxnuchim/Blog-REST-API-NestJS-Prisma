@@ -1,7 +1,7 @@
-import { MinLength, IsNotEmpty, IsString } from "class-validator";
+import { Prisma } from "@prisma/client";
+import { IsNotEmpty, IsString } from "class-validator";
 
 export class CreateCategoryDto {
-    @MinLength(2)
     @IsNotEmpty()
     @IsString()
     name: string;
